@@ -47,3 +47,15 @@ func TestGetPrimes2(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkGetPrimes(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		getPrimes(500)
+	}
+}
+
+func BenchmarkGetPrimes2(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		getPrimes2(500)
+	}
+}
